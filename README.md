@@ -3,6 +3,7 @@ This is the relevant code about the book - Machine Learning in Action. Most of t
 
 ## Progress
 * Chapter 01 [ **`ACCEPTED!!`** ]: Sept 30 - Sept 30
-* Chapter 02 [ **`PROCESSING`** ]: Sept 30 -
-* Chapter 03 [ **`WAITING...`** ]
+* Chapter 02 [ **`ACCEPTED!!`** ]: Sept 30 - Oct 2
+* Chapter 03 [ **`PROCESSING`** ]: Oct 2 -
+* Chapter 04 [ **`WAITING...`** ]:
 * Appendix A [ **`ACCEPTED!!`** ]: Oct 1 - Oct 1
