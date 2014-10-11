@@ -7,6 +7,6 @@ This is the relevant code about the book - Machine Learning in Action. Most of t
 * Chapter 03 [ **`ACCEPTED!!`** ]: Oct 2 - Oct 4
 * Chapter 04 [ **`ACCEPTED!!`** ]: Oct 5 - Oct 5
 * Chapter 05 [ **`ACCEPTED!!`** ]: Oct 8 - Oct 9
-* Chapter 06 [ **`PROCESSING`** ]: Oct 10
+* Chapter 06 [ **`ACCEPTED!!`** ]: Oct 10 - Oct 11
 * Chapter 07 [ **`WAITING...`** ]:
 * Appendix A [ **`ACCEPTED!!`** ]: Oct 1 - Oct 1
