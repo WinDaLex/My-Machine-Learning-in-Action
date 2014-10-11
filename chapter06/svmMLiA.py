@@ -37,7 +37,7 @@ def smoSimple(dataMatIn, classLabels, C, toler, maxIter):
                 fXj = float(multiply(alphas, labelMat).T * (dataMatrix * dataMatrix[j,:].T)) + b
                 Ej = fXj - float(labelMat[j])
                 alphaIold = alphas[i].copy()
-                alphaJold = alphas[i].copy()
+                alphaJold = alphas[j].copy()
                 if (labelMat[i] != labelMat[j]):
                     L = max(0, alphas[j] - alphas[i])
                     H = min(C, C + alphas[j] - alphas[i])
@@ -46,8 +46,7 @@ def smoSimple(dataMatIn, classLabels, C, toler, maxIter):
                     H = min(C, alphas[j] + alphas[i])
                 if L == H: print "L == H"; continue
                 eta = 2.0 * dataMatrix[i,:] * dataMatrix[j,:].T - \
-                        dataMatrix[i,:] * dataMatrix[i,:].T - \
-                        dataMatrix[j,:] * dataMatrix[j,:].T
+                        dataMatrix[i,:] * dataMatrix[i,:].T - dataMatrix[j,:] * dataMatrix[j,:].T
                 if eta >= 0: print "eta >= 0"; continue
                 alphas[j] -= labelMat[j] * (Ei - Ej) / eta
                 alphas[j] = clipAlpha(alphas[j], H, L)
@@ -55,14 +54,10 @@ def smoSimple(dataMatIn, classLabels, C, toler, maxIter):
                     print "j not moving enough"
                     continue
                 alphas[i] += labelMat[j] * labelMat[i] * (alphaJold - alphas[j])
-                b1 = b - Ei - labelMat[i] * (alphas[i] - alphaIold) * \
-                        dataMatrix[i,:] * dataMatrix[i,:].T - \
-                        labelMat[j] * (alphas[j] - alphaJold) * \
-                        dataMatrix[i,:] * dataMatrix[j,:].T
-                b2 = b - Ej - labelMat[i] * (alphas[i] - alphaIold) * \
-                        dataMatrix[i,:] * dataMatrix[j,:].T - \
-                        labelMat[j] * (alphas[j] - alphaJold) * \
-                        dataMatrix[j,:] * dataMatrix[j,:].T
+                b1 = b - Ei - labelMat[i] * (alphas[i] - alphaIold) * dataMatrix[i,:] * dataMatrix[i,:].T - \
+                        labelMat[j] * (alphas[j] - alphaJold) * dataMatrix[i,:] * dataMatrix[j,:].T
+                b2 = b - Ej - labelMat[i] * (alphas[i] - alphaIold) * dataMatrix[i,:] * dataMatrix[j,:].T - \
+                        labelMat[j] * (alphas[j] - alphaJold) * dataMatrix[j,:] * dataMatrix[j,:].T
                 if (0 < alphas[i]) and (C > alphas[i]): b = b1
                 elif (0 < alphas[j]) and (C > alphas[j]): b = b2
                 else: b = (b1 + b2) / 2.0
