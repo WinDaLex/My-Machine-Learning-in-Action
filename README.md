@@ -1,7 +1,9 @@
 ## Overview
+
 This is the relevant code about the book - Machine Learning in Action. Most of them are the sample in the book. I made this for studying machine learning and tracking the process of my study.
 
 ## Progress
+
 * Chapter 01 [ **`ACCEPTED!!`** ]: Sept 30
 * Chapter 02 [ **`ACCEPTED!!`** ]: Sept 30, Oct 1, Oct 2
 * Chapter 03 [ **`ACCEPTED!!`** ]: Oct 2, Oct 3, Oct 4
