@@ -18,7 +18,7 @@ This is the relevant code about the book - Machine Learning in Action. Most of t
 * Chapter 12 [ **`ACCEPTED!!`** ]: Oct 23
 * Chapter 13 [ **`ACCEPTED!!`** ]: Oct 25
 * Chapter 14 [ **`ACCEPTED!!`** ]: Oct 26, Oct 27
-* Chapter 15 [ **`PROCESSING`** ]: Oct 29
+* Chapter 15 [ **`ACCEPTED!!`** ]: Oct 29, Oct 31
 * Appendix A [ **`ACCEPTED!!`** ]: Oct 1
 * Appendix B [ **`ACCEPTED!!`** ]: Oct 2
 * Appendix C [ **`ACCEPTED!!`** ]: Oct 14
